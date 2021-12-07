@@ -7,6 +7,8 @@ const ghToken = core.getInput('org-admin-token');
 var createRepoData = JSON.stringify(
   {
     "name":targetRepoName,
+    "private":true,
+    "visibility":"private"
   }
 );
 const targetOrgName = github.context.payload.repository.owner.login;
