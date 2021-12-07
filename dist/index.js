@@ -11487,7 +11487,7 @@ var createRepoData = JSON.stringify(
     "name":targetRepoName,
   }
 );
-const targetOrgName = JSON.stringify(github.context.payload.repository.owner.login);
+const targetOrgName = github.context.payload.repository.owner.login;
 
 var config = {
   method: 'post',
