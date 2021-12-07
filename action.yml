@@ -1,0 +1,17 @@
+name: 'EDIT THIS'
+description: 'EDIT THIS'
+inputs:
+  who-to-greet:  # change this as needed
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+  random-input:  # change this as needed
+    description: 'random input'
+    required: true
+    default: 'something'
+outputs:
+  time: # change this as needed
+    description: 'The time we greeted you'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
