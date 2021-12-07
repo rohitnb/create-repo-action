@@ -26,8 +26,9 @@ var config = {
 
 axios(config)
 .then(function (response) {
-  console.log(JSON.stringify(response.data));
+  console.log("Repo "+targetRepoName+' created successfully!');
+  core.setOutput("repo-url", "https://github.com/"+targetOrgName+"/"+targetRepoName);
 })
 .catch(function (error) {
-  console.log(error);
+  core.setFailed(error.message);
 });
