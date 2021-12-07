@@ -1,17 +1,13 @@
-name: 'EDIT THIS'
-description: 'EDIT THIS'
+name: 'Create an Organization Repository'
+description: 'Creates an Organization Repository and adds the Actor as an admin'
 inputs:
-  who-to-greet:  # change this as needed
-    description: 'Who to greet'
+  repo-name:  # change this as needed
+    description: 'What is the name of the repository?'
     required: true
-    default: 'World'
-  random-input:  # change this as needed
-    description: 'random input'
-    required: true
-    default: 'something'
+    default: ''
 outputs:
-  time: # change this as needed
-    description: 'The time we greeted you'
+  repo-url: # change this as needed
+    description: 'URL of the created repository'
 runs:
   using: 'node12'
   main: 'dist/index.js'
