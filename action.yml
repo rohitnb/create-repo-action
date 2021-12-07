@@ -5,6 +5,10 @@ inputs:
     description: 'What is the name of the repository?'
     required: true
     default: ''
+  org-admin-token:
+    description: 'Organization admin token with admin:org scope'
+    required: true
+    default: ''
 outputs:
   repo-url: # change this as needed
     description: 'URL of the created repository'

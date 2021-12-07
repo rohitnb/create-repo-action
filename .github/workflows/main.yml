@@ -16,5 +16,6 @@ jobs:
         uses: ./ # Uses an action in the root directory
         id: hello
         with:
-          repo-name: 'Mona the Octocat'
+          repo-name: 'created-from-actions-1'
+          org-admin-token: '${{ secrets.ORG_ADMIN_TOKEN }}'
       # Use the output from the `hello` step
