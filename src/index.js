@@ -9,7 +9,7 @@ var createRepoData = JSON.stringify(
   }
 );
 const payload = JSON.stringify(github.context.payload, undefined, 2);
-console.log(payload.repository.owner.login);
+console.log(JSON.stringify(github.context.payload.repository.owner.login));
 
 // var config = {
 //   method: 'post',
