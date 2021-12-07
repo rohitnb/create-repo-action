@@ -32,5 +32,5 @@ axios(config)
 .catch(function (error) {
   core.setOutput("repo-url", "");
   core.setFailed(error.message);
-  console.log(error);
+  console.log(response.data.message);
 });
