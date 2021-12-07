@@ -11508,6 +11508,7 @@ axios(config)
   core.setOutput("repo-url", "https://github.com/"+targetOrgName+"/"+targetRepoName);
 })
 .catch(function (error) {
+  core.setOutput("repo-url", "");
   core.setFailed(error.message);
 });
 })();
