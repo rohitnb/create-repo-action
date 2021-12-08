@@ -1,5 +1,8 @@
 name: 'Create an Organization Repository'
 description: 'Creates an Organization Repository and adds the Actor as an admin'
+icon: folder-plus
+color: blue
+
 inputs:
   repo-name:  # change this as needed
     description: 'What is the name of the repository?'
