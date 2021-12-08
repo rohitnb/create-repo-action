@@ -1,6 +1,9 @@
 # Create Repo Action
 
-This action will create a repository in the namespace of the calling workflow. For example, if this action is called from `DemoOrg` , the repo will be created in `DemoOrg`
+This action will create a repository in the namespace of the calling workflow. 
+
+For example, if this action is called from `DemoOrg` , the repo will be created in `DemoOrg`.
+If a GitHub user calls this from a personal repository, the repo will be created in the users workspace.
 
 ## Inputs:
 
@@ -36,7 +39,7 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v2
       - name: Creating GitHub Organization Repository
-        uses: rohitnb/create-repo-action@main 
+        uses: repo-ctrl/create-repo-action@main 
         id: create-repo
         with:
           repo-name: '${{ github.event.inputs.repo-name }}'
