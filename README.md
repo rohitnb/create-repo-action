@@ -47,3 +47,7 @@ jobs:
       - name: Log URL to the repo
         run: echo "The new repo is ${{ steps.create-repo.outputs.repo-url }}"
 ```
+
+## Examples:
+
+Check out the [Admin Repo](https://github.com/repo-ctrl/the-admin-repo) for examples of using this!
