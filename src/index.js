@@ -3,7 +3,9 @@ const github = require('@actions/github');
 const axios = require('axios');
 
 const targetRepoName = core.getInput('repo-name');
+const targetOrgName = core.getInput('org-name');
 const ghToken = core.getInput('org-admin-token');
+
 var createRepoData = JSON.stringify(
   {
     "name":targetRepoName,
@@ -11,7 +13,7 @@ var createRepoData = JSON.stringify(
     "visibility":"private"
   }
 );
-const targetOrgName = github.context.payload.repository.owner.login;
+
 
 var config = {
   method: 'post',
