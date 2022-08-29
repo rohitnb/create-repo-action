@@ -9,6 +9,10 @@ inputs:
     description: 'What is the name of the repository?'
     required: true
     default: ''
+  org-name:
+    description: 'Organization name'
+    required: true
+    default: ''
   org-admin-token:
     description: 'Organization admin token with admin:org scope'
     required: true
