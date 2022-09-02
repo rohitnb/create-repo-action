@@ -20,6 +20,6 @@ var resp = await octokit.request('POST /orgs/'+targetOrgName+'/repos', {
     has_wiki: true
   })
 
-core.debug(JSON.stringify(resp))
+core.setOutput("repo", resp.full_name);
 core.setOutput("repo-url", resp.url);
 
