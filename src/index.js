@@ -21,5 +21,3 @@ var resp = await octokit.request('POST /orgs/'+targetOrgName+'/repos', {
   })
 
 core.setOutput("repo", resp.full_name);
-core.setOutput("repo-url", resp.url);
-
