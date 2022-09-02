@@ -9,7 +9,7 @@ const octokit = new Octokit({
     auth: ghToken
   })
 
-await octokit.request('POST /orgs/'+targetOrgName+'/repos', {
+var resp = await octokit.request('POST /orgs/'+targetOrgName+'/repos', {
     org: targetOrgName,
     name: targetRepoName,
     description: 'This is a demo repo created from an action repository',
@@ -19,4 +19,7 @@ await octokit.request('POST /orgs/'+targetOrgName+'/repos', {
     has_projects: true,
     has_wiki: true
   })
+
+core.debug(JSON.stringify(resp))
+core.setOutput("repo-url", resp.url);
 
